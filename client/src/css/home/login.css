@@ -1,0 +1,138 @@
+/* login.css */
+
+.login-background {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end; /* Moves the content (login card) to the right */
+  align-items: center;
+}
+
+.login-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Light overlay */
+  z-index: 2;
+}
+
+.login-card {
+  display: flex;
+  flex-direction: row;
+  background: rgba(3, 23, 79, 0.327);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: #333;
+  z-index: 3;
+  margin-right: 100px;
+}
+
+.login-img-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-img-side {
+  flex: 1;
+  min-width: 300px;
+}
+
+.login-form-side {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.login-form label {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.login-form input {
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.login-button {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+.login-error {
+  background-color: #ffe0e0;
+  color: #d8000c;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+  }
+
+  .login-img-side {
+    height: 200px;
+  }
+
+  .login-form-side {
+    padding: 24px;
+  }
+}
